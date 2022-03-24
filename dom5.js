@@ -28,9 +28,9 @@
 //looping 
 //forEach
 
-const itens = document.getElementsByTagName('li');
+// const itens = document.getElementsByTagName('li');
 
-let itensArray = Array.from(itens);
+// let itensArray = Array.from(itens);
 
 // itensArray.forEach(function(li, indice){
 //     console.log(indice + ': ' + li.innerText);
@@ -38,13 +38,32 @@ let itensArray = Array.from(itens);
 
 //odd - impar; even - par
 
-let itensImpares = document.querySelectorAll('li:nth-child(odd)');
+// let itensImpares = document.querySelectorAll('li:nth-child(odd)');
 
 // console.log(itensImpares);
 
 
-let mudaCor = Array.from(itensImpares);
+// mudaCor.forEach(function(item){
+//     item.style.background = '#dedede';
+// });
 
-mudaCor.forEach(function(item){
-    item.style.background = '#dedede';
-});
+// let mudaCor = Array.from(itensImpares);
+
+//pegar qualquer elemento, mesmo que não tenha id 
+const ITENS = document.querySelector('ul.collection');
+
+// pega o ul primeiro - a - i : console.log(ITENS.children[2].children[0].children[0]);
+console.log(ITENS.children[2].firstChild);
+
+ITENS.children[2].firstChild.textContent = 'Estudar ainda mais';
+
+//ITENS.firstChild
+// ITENS.lastChild
+// ITENS.childElementCount
+
+const tarefa = document.querySelector('div.input-field');
+console.log(tarefa.children[1].textContent);
+
+const clean = document.querySelector('a.clear-tasks');
+let muda = clean.innerHTML = 'Clean taks';
+console.log(muda);
