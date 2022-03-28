@@ -16,7 +16,7 @@ saida = document.forms[0][0]; //pegar o primeiro elemento dentro do primeiro for
 saida = document.links;
 saida = document.links[0];
 saida = document.links[0].className;
-saida = document.scripts;
+saida = document.scripts;//Retorna uma lista dos elementos <script> no documento. 
 saida = document.scripts[2];
 saida = document.scripts[2].getAttribute('src');
 

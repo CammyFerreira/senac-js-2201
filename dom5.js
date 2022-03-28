@@ -24,6 +24,7 @@
 // itens[2].style.color = 'blue';
 
 //pegando o elemento pela tag 'li'
+
 //cria um vetor com os itens usando a classe Array
 //looping 
 //forEach
@@ -40,7 +41,7 @@ let itensArray = Array.from(itens);
 
 let itensImpares = document.querySelectorAll('li:nth-child(odd)');
 
-// console.log(itensImpares);
+console.log(itensImpares);
 
 
 let mudaCor = Array.from(itensImpares);

@@ -3,6 +3,7 @@ const tamanho = 'A:' + window.innerHeight + ' x L:' + window.innerWidth;
 
 const paragrafo = document.getElementById('paragrafo');
 
+//mostra informações do navegador
 const navegador = window.navigator; 
 
 console.log(navegador);
