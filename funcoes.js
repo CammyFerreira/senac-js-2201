@@ -1,5 +1,7 @@
 //function nomeDaFunção(){}
 
+//$ - String template 
+
 function olaMundoNoLog(nome){
     console.log(`Olá ${nome}!`);
 }
@@ -42,11 +44,10 @@ aluno.setNome("BlaBLa");
 
 //Exercício datas
 
+//Instânciando o objeto 
 let hoje = new Date();
 
 console.log(hoje.getSeconds());
-
-
 
 function nomeDoMes(){
    
