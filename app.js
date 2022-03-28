@@ -2,6 +2,10 @@
 /*Comentário de bloco
  */
 
+//const - variável imutável, não pode ser alterada ou redeclarada 
+//console.log - Exibe uma mensagem na console do navegador.
+//let - variável mutável 
+
 const XPTO = 10;
 
 console.log(XPTO);
@@ -11,6 +15,7 @@ let minhaVar = "Olá";
 minhaVar = minhaVar + " Mundo!";
 
 console.log(minhaVar);
+
 
 function aula1(){
     
