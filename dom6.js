@@ -1,22 +1,22 @@
 //criar um elemento ex: classe 
 
-const LI = document.createElement('li');
+const LI = document.createElement('li'); //criando o elemento
 
-LI.className = 'collection-item';
+LI.className = 'collection-item';//criando uma classe para o elemento
 
-LI.id = 'nova-tarefa-qualquer';
+LI.id = 'nova-tarefa-qualquer';//criando um ID para o elemento
 
-LI.setAttribute('title','Pare o mouse para ver');
+LI.setAttribute('title','Pare o mouse para ver');//criando um atributo para o elemento
 
-const TEXTO = document.createTextNode('Tarefa inserida dinamicamente');
+const TEXTO = document.createTextNode('Tarefa inserida dinamicamente');//criando um texto
 
 LI.appendChild(TEXTO); //colocamos o texto em li
 
-console.log(LI);
+console.log(LI); 
 
 const UL = document.querySelector('ul.collection');
 
-UL.appendChild(LI);
+UL.appendChild(LI);//colocando o LI no UL 
 
 //Criando o elemento A
 const A = document.createElement('a');
@@ -38,4 +38,4 @@ novoTitulo.appendChild(novoTexto);
 const tituloAntigo = document.querySelector('h5');
 const elementoPai = document.querySelector('div.card-action');
 
-elementoPai.replaceChild(novoTitulo, tituloAntigo);
+elementoPai.replaceChild(novoTitulo, tituloAntigo);//substituindo o antigo título pelo novo
