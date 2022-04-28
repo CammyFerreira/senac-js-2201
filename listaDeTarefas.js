@@ -56,8 +56,27 @@ function apagaTodasTarefa(evento) {
     evento.preventDefault();
 
     LISTA.innerHTML = '';
-}
 
+    apagaTodasDoLocalStorage();
+}
+function apagaTodasDoLocalStorage(){
+    localStorage.removeItem('tarefas');
+}
+function apagaDoLocalStorage(tarefaParaApagar){
+    let tarefas;
+
+    if(localStorage.getItem('tarefas') === null){
+        tarefas = [];
+    }else{
+        tarefas = JSON.parse(localStorage.getItem('tarefas'));
+    }
+    tarefas.forEach(function(tarefa, indice){
+        if(tarefaParaApagar.textContent === tarefa){
+            tarefas.splice(indice, 1);
+        }
+    });
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
 function apagaTarefa(evento) {
 
     if (evento.target.parentElement.classList.contains('apaga-tarefa')) {
@@ -102,5 +121,6 @@ function gravaTarefaNoLocalStorage(tarefa) {
     tarefas.push(tarefa.value);
     localStorage.setItem('tarefas', JSON.stringify(tarefas));
 }
+
 carregaMonitorDeEventos();
 

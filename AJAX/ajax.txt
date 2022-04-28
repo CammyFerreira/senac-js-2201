@@ -1,0 +1,2 @@
+AJAX - uma técnica, evita ter
+ que recarregar a página para mostrar novo conteúdo
