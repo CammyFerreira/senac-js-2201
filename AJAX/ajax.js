@@ -1,19 +1,32 @@
-document.querySelector('button').addEventListener('click', carregaConteudo);
+//Exemplo com XMLHttpsRequest
+document.getElementById('xhr').addEventListener('click', buscarDados);
 
-function carregaConteudo(){
-    const XHR = new XMLHttpRequest();
+function buscarDados(){
 
-    XHR.open('GET', 'conteudo.txt', TRUE);
+    const XHR = new XMLHttpRequest;
+
+    XHR.open('GET' , 'conteudo.txt', true);
 
     XHR.onload = function(){
-        if(this.status === 200){// HTTP code 2000 OK}
+
+        if(this.status === 200){
+
             document.getElementById('exibe-conteudo-recuperado').innerText = 
-            this.responseText;
+                this.responseText;
         }
     }
-    XHR.send(); //Realiza a requisição
+
+    XHR.send();
 }
 
-const POSTS = [
-    {titulo: 'Post Um', cont: 'Conteúdo post um'},
-    {titulo: 'Post Dois', cont: 'Conteúdo post dois'}];
+//Exemplo com Fetch
+document.getElementById('fetch').addEventListener('click', carregaConteudo);
+
+function carregaConteudo(){
+
+    fetch('http://10.135.236.14:5500/aula-27-04-22/AJAX/conteudo.txt').then(function(resultado){
+        return resultado.text();
+    }).then(function(conteudo){
+        document.getElementById('exibe-conteudo-recuperado').innerText = conteudo;
+    });
+}
