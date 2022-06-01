@@ -6,7 +6,7 @@ const CAMPO_TAREFA = document.querySelector('#tarefa');
 
 function carregaMonitorDeEventos() {
 
-    //Eventos
+    //Adicionando evento para cada elemento html
     FORMULARIO.addEventListener('submit', adicionarTarefa);
     LISTA.addEventListener('click', apagaTarefa);
     BTN_LIMPAR.addEventListener('click', apagaTodasTarefa);
@@ -18,6 +18,7 @@ function pegaTarefa() {
     if (localStorage.getItem('tarefas') === null) {
         tarefas = [];
     } else {
+        //O método JSON.parse() analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. 
         tarefas = JSON.parse(localStorage.getItem('tarefas'));
     }
 
@@ -53,6 +54,7 @@ function filtraTarefa(evento) {
 
 function apagaTodasTarefa(evento) {
 
+    //Cancela o evento se for cancelável, sem parar a propagação do mesmo.
     evento.preventDefault();
 
     LISTA.innerHTML = '';
@@ -97,10 +99,10 @@ function gravaTarefaNoLocalStorage(tarefa) {
     if (localStorage.getItem('tarefa') === null) {
         tarefas = [];
     } else {
-        tarefas = JSON.parse(localStorage.getItem('tarefas'));
+        tarefas = JSON.parse(localStorage.getItem('tarefas')); //O método JSON.parse() analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string.
     }
     tarefas.push(tarefa.value);
-    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));//O método JSON.stringify() converte valores em javascript para uma String  JSON.
 }
 carregaMonitorDeEventos();
 
