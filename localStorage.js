@@ -38,7 +38,7 @@ document.querySelector('input.btn').addEventListener('click', function(e){
 
     }else{
 
-        tarefas = JSON.parse(localStorage.getItem('tarefas'));
+        tarefas = JSON.parse(localStorage.getItem('tarefas'));//O método JSON.parse() analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string.
 
     }
 
@@ -46,7 +46,7 @@ document.querySelector('input.btn').addEventListener('click', function(e){
 
     tarefas.push(TAREFA);
 
-    localStorage.setItem('tarefas', JSON.stringify(tarefas));
+    localStorage.setItem('tarefas', JSON.stringify(tarefas));//O método JSON.stringify() converte valores em javascript para uma String  JSON.
     
     console.log(tarefas);
 
