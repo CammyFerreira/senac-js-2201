@@ -1,3 +1,4 @@
+//jQuery é uma biblioteca de funções JavaScript que interage com o HTML
 $(document).ready(function () {
 
     console.log($('h3.hx').text());
