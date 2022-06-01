@@ -1,3 +1,5 @@
+//Uma cláusula catch contém declarações que especificam o que fazer caso uma exceção seja lançada no bloco try
+
 try {
     
     executaMinhaFuncao();
